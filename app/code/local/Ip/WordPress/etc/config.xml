@@ -1,35 +1,56 @@
 <?xml version="1.0"?>
 <config>
- 
-    <modules>
-        <Ip_WordPress>
-            <version>0.1.0</version>
-        </Ip_WordPress>
-    </modules>
-	
-    <frontend>
-        <layout>
-            <updates>
-                <wordpress>
-                    <file>wordpress.xml</file>
-                </wordpress>
-            </updates>
-        </layout>
+
+	<modules>
+		<Ip_WordPress>
+			<version>0.1.0</version>
+		</Ip_WordPress>
+	</modules>
+
+	<frontend>
+		<layout>
+			<updates>
+				<wordpress>
+					<file>wordpress.xml</file>
+				</wordpress>
+			</updates>
+		</layout>
 	</frontend>
- 
-    <global> 
-	<helpers>
-		<wordpress>
-			<class>Ip_WordPress_Helper</class>
-		</wordpress>
-	</helpers> 			
-        <blocks>
-            <wordpress>
-                <class>Ip_WordPress_Block</class>
-            </wordpress> 
-        </blocks> 				
-    </global>
-	
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<ip_section translate="title" module="wordpress">
+											<title>CMS Wordpress</title>
+										</ip_section>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+
+	<global>
+		<helpers>
+			<wordpress>
+				<class>Ip_WordPress_Helper</class>
+			</wordpress>
+		</helpers>
+		<blocks>
+			<wordpress>
+				<class>Ip_WordPress_Block</class>
+			</wordpress>
+		</blocks>
+	</global>
+
 	<default>
 		<web>
 			<routers>
@@ -44,6 +65,7 @@
 				<ip_wordpress_url>news</ip_wordpress_url>
 			</ip_wordpress>
 		</ip_section>
-	</default>	
-	
+	</default>
+
 </config>
+

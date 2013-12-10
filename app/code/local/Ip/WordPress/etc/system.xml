@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <config>
 	<tabs>
-        <ip_tab translate="label" module="global">
-            <label>Inverse Paradox</label>
+        <ip_tab translate="label" module="wordpress">
+            <label>CMS Wordpress</label>
             <sort_order>250</sort_order>
         </ip_tab>
     </tabs>
 	<sections>
-         <ip_section translate="label" module="global">
+         <ip_section translate="label" module="wordpress">
          	<label>Custom Options</label>
 			<tab>ip_tab</tab>
 			<frontend_type>text</frontend_type>
@@ -16,7 +16,7 @@
 			<show_in_website>1</show_in_website>
 			<show_in_store>1</show_in_store>
             <groups>
-                <ip_wordpress translate="label comment" module="global">
+                <ip_wordpress translate="label comment" module="wordpress">
                     <label>Wordpress Options</label>
                     <sort_order>10</sort_order>
                     <show_in_default>1</show_in_default>
